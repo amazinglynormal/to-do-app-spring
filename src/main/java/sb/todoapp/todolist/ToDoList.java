@@ -13,7 +13,7 @@ public class ToDoList {
     private Long id;
     private String title;
 
-    public ToDoList() {
+    protected ToDoList() {
     }
 
     public ToDoList(Long id, String title) {

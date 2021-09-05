@@ -16,7 +16,7 @@ public class ToDo {
 
     private String description;
 
-    public ToDo() {
+    protected ToDo() {
     }
 
     public ToDo(Long id, String title, String description) {

@@ -16,7 +16,7 @@ public class User {
 
     private String password;
 
-    public User() {
+    protected User() {
     }
 
     public User(Long id, String email, String password) {
