@@ -1,8 +1,12 @@
 package sb.todoapp.user;
 
+import sb.todoapp.todolist.ToDoList;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "User")
+@Table(name = "USER")
 public class User {
 
     @Id
@@ -17,6 +21,9 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private Set<ToDoList> toDoLists;
 
     protected User() {
     }
