@@ -1,20 +1,28 @@
 package sb.todoapp.todo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import sb.todoapp.todolist.ToDoList;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name = "ToDo")
+@Table(name = "TO_DO_ITEM")
 public class ToDo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "title", nullable = false)
     private String title;
 
+    @Column(name = "description", nullable = false)
     private String description;
+
+
+    @ManyToOne
+    @JoinColumn(name = "to_do_list_id")
+    private ToDoList toDoList;
 
     protected ToDo() {
     }
