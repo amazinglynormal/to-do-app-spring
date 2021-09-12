@@ -9,23 +9,25 @@ import Profile from "./components/Profile";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/profile">
-          <Profile />
-        </Route>
-        <Route path="/login">
-          <LogIn />
-        </Route>
-        <Route path="/signup">
-          <SignUp />
-        </Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+          <Route path="/login">
+            <LogIn />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
