@@ -9,9 +9,9 @@ export const ToDoListSelector = ({ usersToDoLists }) => {
       footer={<Button type="primary">Create new To-Do List</Button>}
       bordered
       dataSource={usersToDoLists}
-      renderItem={(item) => (
+      renderItem={(toDoList) => (
         <List.Item>
-          <Link to={`/todolist/${item.id}`}>{item.title}</Link>
+          <Link to={`/todolist/${toDoList.id}`}>{toDoList.title}</Link>
         </List.Item>
       )}
     />
