@@ -18,7 +18,6 @@ const SignUp = () => {
       <h1>Sign Up Page</h1>
       <div className="formContainer">
         <Form
-          name="basic"
           labelCol={{ span: 8 }}
           wrapperCol={{ span: 16 }}
           onFinish={onFinish}

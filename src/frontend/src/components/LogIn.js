@@ -18,7 +18,6 @@ const LogIn = () => {
       <h1>Log In Page</h1>
       <div className="formContainer">
         <Form
-          name="basic"
           labelCol={{ span: 8 }}
           wrapperCol={{ span: 16 }}
           initialValues={{ remember: true }}
